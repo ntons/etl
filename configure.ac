@@ -33,7 +33,8 @@ AC_CHECK_HEADER_STDBOOL
 AC_CONFIG_FILES([ \
                  Makefile \
                  src/Makefile \
-                 tests/Makefile
+                 tests/Makefile \
+                 etl.pc
                  ])
 
 AC_OUTPUT

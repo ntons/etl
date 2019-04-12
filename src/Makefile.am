@@ -2,7 +2,6 @@
 
 lib_LTLIBRARIES = libetl.la
 libetl_la_SOURCES = etl.cpp \
-					trackable.cpp \
 					datetime.cpp \
 					crc32.cpp \
 					random.cpp \
@@ -15,7 +14,6 @@ libetl_la_SOURCES = etl.cpp \
 					iterator_adapter.cpp
 
 pkginclude_HEADERS = etl.hpp \
-					 trackable.hpp \
 					 datetime.hpp \
 					 crc32.hpp \
 					 random.hpp \
