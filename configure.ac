@@ -24,17 +24,22 @@ AC_PROG_MAKE_SET
 AC_CHECK_LIB([pthread], [pthread_create])
 
 # Checks for header files.
+AC_CHECK_HEADERS([])
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_CHECK_HEADER_STDBOOL
+AC_C_INLINE
+AC_TYPE_SIZE_T
 
 # Checks for library functions.
+AC_FUNC_MKTIME
+AC_FUNC_MMAP
+AC_CHECK_FUNCS([])
 
-AC_CONFIG_FILES([ \
-                 Makefile \
-                 src/Makefile \
-                 tests/Makefile \
-                 etl.pc
+AC_CONFIG_FILES([etl.pc
+                 Makefile
+                 src/Makefile
+                 tests/Makefile
                  ])
 
 AC_OUTPUT

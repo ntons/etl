@@ -266,7 +266,7 @@ public:
         return insert(value_type(value));
     }
 
-    std::pair<iterator, bool> unique_insert(value_type&& value)
+    std::pair<iterator, bool> replace(value_type&& value)
     {
         const int pos = vec_->size();
         const int height = random_height();
@@ -294,9 +294,9 @@ public:
             at(kHeadPos).height_ = height;
         return std::make_pair(iterator(vec_, pos), true);
     }
-    std::pair<iterator, bool> unique_insert(const value_type& value)
+    std::pair<iterator, bool> replace(const value_type& value)
     {
-        return unique_insert(value_type(value));
+        return replace(value_type(value));
     }
 
     iterator erase(const_iterator first, const_iterator last)

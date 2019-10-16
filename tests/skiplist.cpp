@@ -29,7 +29,7 @@ TEST(skiplist, insert_erase)
     ASSERT_EQ(s.size(), 0);
 }
 
-TEST(skiplist, unique_insert)
+TEST(skiplist, replace)
 {
     std::vector<skiplist_int::node_type> v;
     skiplist_int s(&v);
@@ -37,19 +37,19 @@ TEST(skiplist, unique_insert)
 
     std::pair<skiplist_int::iterator, bool> pair;
 
-    pair = s.unique_insert(100);
+    pair = s.replace(100);
     ASSERT_TRUE(pair.second);
     ASSERT_EQ(*pair.first, 100);
 
-    pair = s.unique_insert(100);
+    pair = s.replace(100);
     ASSERT_FALSE(pair.second);
     ASSERT_EQ(*pair.first, 100);
 
-    pair = s.unique_insert(50);
+    pair = s.replace(50);
     ASSERT_TRUE(pair.second);
     ASSERT_EQ(*pair.first, 50);
 
-    pair = s.unique_insert(50);
+    pair = s.replace(50);
     ASSERT_FALSE(pair.second);
     ASSERT_EQ(*pair.first, 50);
 }
