@@ -15,4 +15,4 @@ SOURCES = tests.cpp \
 
 noinst_PROGRAMS = tests
 tests_SOURCES = $(SOURCES)
-tests_LDADD = $(top_builddir)/src/libetl.la -lgtest -lpthread
+tests_LDADD = $(top_builddir)/src/libxtl.la -lgtest -lpthread

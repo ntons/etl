@@ -2,8 +2,8 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([etl],[0.0.1],[michaelpublic@qq.com])
-AC_CONFIG_SRCDIR([src/etl.cpp])
+AC_INIT([xtl],[0.0.1],[michaelpublic@qq.com])
+AC_CONFIG_SRCDIR([src/xtl.cpp])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE()
@@ -36,7 +36,7 @@ AC_FUNC_MKTIME
 AC_FUNC_MMAP
 AC_CHECK_FUNCS([])
 
-AC_CONFIG_FILES([etl.pc
+AC_CONFIG_FILES([xtl.pc
                  Makefile
                  src/Makefile
                  tests/Makefile
